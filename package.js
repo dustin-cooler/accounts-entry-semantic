@@ -83,7 +83,7 @@ Package.on_test(function (api) {
             'coffeescript',
             'simple-form',
             'iron-router']);
-  api.use('accounts-entry');
+  api.use('accounts-entry-semantic');
 
   api.add_files(['tests/route.coffee', 'tests/client.html', 'tests/client.coffee'], 'client');
 })
