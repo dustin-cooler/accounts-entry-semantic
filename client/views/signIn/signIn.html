@@ -1,12 +1,12 @@
 <template name='entrySignIn'>
-  <div class="container">
-    <div class="row">
+  <div class="ui one column stackable center aligned page grid">
+    <div class="column eight wide">
       {{#if logo}}
         <div class="entry-logo">
             <a href="/"><img src="{{logo}}" alt="logo"></a>
         </div>
       {{/if}}
-      <div class="entry col-md-4 col-md-offset-4">
+      <div class="entry ui relaxed form segment">
         {{#if otherLoginServices}}
         <div class="entry-social">
           {{#each loginServices}}
@@ -26,16 +26,16 @@
           </div>
         {{/unless}}
         {{#if passwordLoginService}}
-          <form class="entry-form" id='signIn'>
-            <div class="form-group">
+          <form class="entry-form ui left aligned" id='signIn'>
+            <div class="field">
               <input autofocus name="email" type="{{emailInputType}}" class="form-control" value='{{email}}' placeholder="{{emailPlaceholder}}">
             </div>
-            <div class="form-group">
+            <div class="field">
               <input name="password" type="password" class="form-control" value='{{password}}' placeholder="{{t9n 'password'}}">
             </div>
             {{#unless isUsernameOnly}}
               <p><a href="/forgot-password">{{t9n "forgotPassword"}}</a></p>
-              <button type="submit" class="submit btn btn-block btn-default">{{t9n "signIn"}}</button>
+              <button type="submit" class="ui blue submit button">{{t9n "signIn"}}</button>
             {{/unless}}
           </form>
         {{/if}}

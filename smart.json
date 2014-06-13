@@ -1,5 +1,5 @@
 {
-  "name": "accounts-entry",
+  "name": "accounts-entry-semantic",
   "description": "A meteorite package that relies on Iron Router and gives you whole-page login styles.",
   "homepage": "https://github.com/Differential/accounts-entry",
   "author": "Differential (http://differential.io)",
