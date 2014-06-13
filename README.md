@@ -10,5 +10,5 @@ alternative interface to accounts-ui.  This package has whole pages for sign up,
 
 
 Original Project:
-[Github](https://github.com/Differential/accounts-entry)
-[Documentation](http://github.differential.io/accounts-entry/)
+* [Github](https://github.com/Differential/accounts-entry)
+* [Documentation](http://github.differential.io/accounts-entry/)
