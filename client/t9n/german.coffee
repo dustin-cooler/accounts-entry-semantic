@@ -18,6 +18,7 @@ de =
   username: "Benutzername"
   optional: "Optional"
   signupCode: "Registrierungscode"
+  clickAgree: "By clicking Sign up, you agree to our"
   clickAgree: "Durch die Registrierung akzeptieren Sie unsere"
   privacyPolicy: "Datenschutzerklärung"
   terms: "Geschäftsbedingungen"

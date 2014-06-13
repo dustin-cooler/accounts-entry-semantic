@@ -7,8 +7,6 @@ AccountsEntry =
     emailToLower: true
     usernameToLower: false
     entrySignUp: '/sign-up'
-    extraSignUpFields: []
-    showOtherLoginServices: true
 
   isStringEmail: (email) ->
     emailPattern = /^([\w.-]+)@([\w.-]+)\.([a-zA-Z.]{2,6})$/i
@@ -25,14 +23,14 @@ AccountsEntry =
       signUpRoute = Router.routes['entrySignUp']
       signUpRoute.options.template = appConfig.signUpTemplate
 
-  signInRequired: (router, pause, extraCondition) ->
+  signInRequired: (router, extraCondition) ->
     extraCondition ?= true
     unless Meteor.loggingIn()
       unless Meteor.user() and extraCondition
         Session.set('fromWhere', router.path)
         Router.go('/sign-in')
         Session.set('entryError', t9n('error.signInRequired'))
-        pause.call()
+        router.pause()
 
 @AccountsEntry = AccountsEntry
 

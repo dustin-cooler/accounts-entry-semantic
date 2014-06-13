@@ -1,5 +1,5 @@
 if typeof Handlebars isnt "undefined"
-  UI.registerHelper "signedInAs", (date) ->
+  Handlebars.registerHelper "signedInAs", (date) ->
     if Meteor.user().username
       Meteor.user().username
     else if Meteor.user().profile && Meteor.user().profile.name
@@ -9,29 +9,25 @@ if typeof Handlebars isnt "undefined"
     else
       "Signed In"
 
-UI.registerHelper 'accountButtons', ->
+Handlebars.registerHelper 'accountButtons', ->
   Template.entryAccountButtons
 
-UI.registerHelper 'capitalize', (str) ->
+Handlebars.registerHelper 'capitalize', (str) ->
   str.charAt(0).toUpperCase() + str.slice(1)
 
-UI.registerHelper 'signupClass', ->
-  if AccountsEntry.settings.showOtherLoginServices && Accounts.oauth && Accounts.oauth.serviceNames().length > 0
+Handlebars.registerHelper 'signupClass', ->
+  if Accounts.oauth && Accounts.oauth.serviceNames().length > 0
     "collapse"
 
-UI.registerHelper 'signedIn', ->
-  return true if Meteor.user()
-
-UI.registerHelper 'otherLoginServices', ->
-  AccountsEntry.settings.showOtherLoginServices &&
+Handlebars.registerHelper 'otherLoginServices', ->
   Accounts.oauth &&
   Accounts.oauth.serviceNames().length > 0
 
-UI.registerHelper 'loginServices', ->
+Handlebars.registerHelper 'loginServices', ->
   Accounts.oauth.serviceNames()
 
-UI.registerHelper 'showSignupCode', ->
+Handlebars.registerHelper 'showSignupCode', ->
   AccountsEntry.settings.showSignupCode is true
 
-UI.registerHelper 'passwordLoginService', ->
+Handlebars.registerHelper 'passwordLoginService', ->
   !!Package['accounts-password']
