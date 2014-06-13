@@ -6,13 +6,13 @@
 
 <template name="_entryExtraSignUpField">
   {{#if isTextField }}
-    <div class="form_group">
+    <div class="field">
       {{text_field name type=type required=required}}
     </div>
   {{/if}}
 
   {{#if isCheckbox}}
-    <div class="checkbox">
+    <div class="ui checkbox">
       {{check_box name label=label required=required}}
     </div>
   {{/if}}
