@@ -9,3 +9,4 @@ packages
 *.sublime-workspace
 *.sublime-project
 *.komodoproject
+*.DS_Store
