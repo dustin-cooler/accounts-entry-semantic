@@ -19,7 +19,7 @@ Template.entrySocial.helpers
 
 Template.entrySocial.events
 
-  'click .btn': (event)->
+  'click .ui.button': (event)->
     event.preventDefault()
     serviceName = $(event.target).attr('id').split('-')[1]
     callback = (err) ->

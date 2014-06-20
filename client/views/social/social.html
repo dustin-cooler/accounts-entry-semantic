@@ -1,9 +1,9 @@
 <template name='entrySocial'>
   <button class="ui {{this}}{{plus}} button segment" id="entry-{{this}}" name="{{this}}">
     {{#if unconfigured}}
-      <i class="{{this}}{{plus}} icon"></i> {{t9n "configure"}} {{capitalize this}}
+      <i class="{{this}}{{plus}} icon"></i> {{t9n "configure"}}&nbsp;{{capitalize this}}
     {{else}}
-      <i class="{this}}{{plus}} icon"></i> {{t9n "sign"}} {{buttonText}} {{t9n "with"}} {{capitalize this}}
+      <i class="{this}}{{plus}} icon"></i> {{t9n "sign"}}&nbsp;{{buttonText}}&nbsp;{{t9n "with"}}&nbsp;{{capitalize this}}
     {{/if}}
   </button>
 </template>
